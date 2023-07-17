@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400;1,700&family=Piazzolla:ital,opsz,wght@0,8..30,100;0,8..30,700;1,8..30,100;1,8..30,700&display=swap');
+
+@font-face {
+    font-family: Manrope;
+    font-weight: 100 1000;
+    src: url("../fonts/Manrope[wght].woff2") format("woff2-variations");
+}
+
+@font-face {
+  font-family: 'SUITE-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: "Libre Baskerville";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""), url("../fonts/libre-baskerville-v14-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Libre Baskerville";
+    font-style: normal;
+    font-weight: 700;
+    src: local(""), url("../fonts/libre-baskerville-v14-latin-700.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Libre Baskerville";
+    font-style: italic;
+    font-weight: 400;
+    src: local(""), url("../fonts/libre-baskerville-v14-latin-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Hack';
+  src: url('../fonts/hack-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hack';
+  src: url('../fonts/hack-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hack';
+  src: url('../fonts/hack-italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hack';
+  src: url('../fonts/hack-bolditalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""), url("../fonts/jetbrains-mono-v13-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    font-style: normal;
+    font-weight: 700;
+    src: local(""), url("../fonts/jetbrains-mono-v13-latin-700.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    font-style: normal;
+    font-weight: 800;
+    src: local(""), url("../fonts/jetbrains-mono-v13-latin-800.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    font-style: italic;
+    font-weight: 400;
+    src: local(""), url("../fonts/jetbrains-mono-v13-latin-italic.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    font-style: italic;
+    font-weight: 700;
+    src: local(""), url("../fonts/jetbrains-mono-v13-latin-700italic.woff2") format("woff2");
+}
