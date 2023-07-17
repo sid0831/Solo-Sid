@@ -2,9 +2,9 @@
 @import "fonts.css";
 
 :root {
-    --font-sans: Manrope, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
-    --font-serif: Libre Baskerville, Georgia, Times, serif;
-    --font-mono: JetBrains Mono, Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+    --font-sans: Cabin, Manrope, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+    --font-serif: Piazzolla, Libre Baskerville, Georgia, Times, serif;
+    --font-mono: Hack, JetBrains Mono, Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
     --color-primary-text: var(--color-darker-gray);
     --color-secondary-text-dark: rgba(0, 0, 0, 0.4);
     --color-secondary-text-light: rgba(255, 255, 255, 0.64);
@@ -20,7 +20,7 @@
     --color-lighter-gray: rgba(0, 0, 0, 0.1);
     --color-darker-gray: #fff;
     --color-secondary-text: var(--color-secondary-text-light);
-    --color-border: rgba(255, 255, 255, 0.2);
+    --color-border: rgba(242, 199, 99, 0.64);
 }
 
 body {
@@ -53,12 +53,34 @@ hr {
     font-size: 1.6em;
 }
 
+.gh-content p {
+    word-break: keep-all;
+    text-align: justify;
+    text-align-last: start;
+}
+
+.gh-content p>s {
+    text-decoration: line-through;
+    text-decoration-color: var(--color-secondary-text);
+    text-decoration-thickness: 1px;
+}
+
+.gh-content a {
+    color: var(--color-primary-text);
+    text-decoration-style: dotted;
+    text-decoration-thickness: 1px;
+}
+
+.gh-content a:hover {
+    text-decoration-style: solid;
+}
+
 .gh-canvas {
     grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
 .gh-canvas > * {
-    grid-column: 4 / span 6;
+    grid-column: 3 / span 8;
 }
 
 .gh-canvas > .kg-width-wide {
@@ -71,6 +93,16 @@ hr {
     z-index: 20;
     grid-column: 1 / span 12;
     transform: translate3d(0, 0, 0);
+}
+
+:not(pre)>code {
+    background-color: rgba(255, 255, 255, 0.16);
+    color: var(--color-primary-text);
+}
+
+pre {
+    background-color: rgba(255, 255, 255, 0.16);
+    overflow-x: auto;
 }
 
 @media (max-width: 991px) {
@@ -99,6 +131,12 @@ hr {
     }
 }
 
+@media (min-width: 768px) {
+    body:not(.is-dropdown-loaded) .gh-head-menu .nav>li {
+        opacity: 1;
+    }
+}
+
 /* Header
 /* ---------------------------------------------------------- */
 
@@ -107,8 +145,17 @@ hr {
     background-color: transparent;
 }
 
+.gh-head a:hover {
+  color: #f2c763;
+}
+
 .gh-head-logo {
     font-weight: 800;
+    white-space: normal;
+}
+
+.gh-head-brand {
+    line-height: 180%;
 }
 
 .gh-head-logo img {
@@ -120,6 +167,11 @@ hr {
     font-weight: 700;
 }
 
+.is-head-stacked .gh-head-brand {
+    grid-column: 1/4;
+    grid-row: 1;
+}
+
 .is-head-stacked .gh-head-menu::before,
 .is-head-stacked .gh-head-menu::after {
     background-color: var(--color-border);
@@ -129,9 +181,97 @@ hr {
     color: inherit;
 }
 
-@media (max-width: 991px) {
-    .is-head-open:not(.is-head-brand):not(.is-head-dark):not(.is-head-transparent) :is(#gh-head, #gh-head .gh-head-actions) {
+.is-head-stacked .gh-head-actions {
+    grid-column: 4;
+}
+
+@media (max-width: 767px) {
+    .is-head-open:not(.is-head-brand):not(.is-head-dark):not(.is-head-transparent) #gh-head {
         background-color: var(--background-color);
+        height: 100%;
+        inset: 0;
+        overflow-y: scroll;
+        position: fixed;
+        z-index: 3999999;
+    }
+
+    .is-head-open #gh-head .gh-head-menu {
+        visibility: visible;
+    }
+
+    #gh-head .gh-head-inner {
+        gap: 48px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+    }
+
+    #gh-head .gh-head-brand {
+        align-items: center;
+        display: grid;
+        grid-column-start: 1;
+        grid-template-columns: 1fr auto auto;
+        height: 64px;
+        gap: 48px;
+    }
+
+    .gh-head-brand .gh-search {
+        display: inline-flex;
+    }
+    .gh-head-brand-wrapper {
+        max-width: 600px;
+    }
+
+    .gh-burger {
+        display: inline-flex;
+    }
+
+    .gh-head-actions {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    #gh-head .nav {
+        column-gap: 48px;
+    }
+
+    .is-head-stacked .gh-head-inner {
+        padding: 0;
+    }
+
+    .is-head-stacked .gh-head-brand {
+        align-items: center;
+        display: flex;
+        height: 80px;
+    }
+
+    .is-head-stacked .gh-head-menu {
+        grid-column: 1 / span 3;
+        grid-row: 2;
+        height: 56px;
+        justify-content: flex-start;
+        margin: 0 48px;
+    }
+
+    .is-head-stacked .gh-head-menu::before,
+    .is-head-stacked .gh-head-menu::after {
+        background-color: var(--color-border);
+        content: "";
+        height: 1px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    }
+
+    .is-head-stacked .gh-head-menu::before {
+        top: 80px;
+    }
+
+    .is-head-stacked .gh-head-menu::after {
+        top: 136px;
     }
 }
 
@@ -181,10 +321,12 @@ hr {
 }
 
 .gh-about-primary + .gh-about-secondary {
-    max-width: 640px;
+    max-width: 600px;
     margin-top: 20px;
     font-size: clamp(2rem, 0.36vw + 1.83rem, 2.4rem);
     font-weight: 450;
+    text-align: justify;
+    word-break: keep-all;
 }
 
 .gh-about-secondary a {
@@ -648,7 +790,7 @@ hr {
 }
 
 .page-template .no-image .gh-article-title {
-    grid-column: 4 / span 6;
+    grid-column: 3 / span 8;
 }
 
 .has-serif-font .gh-article-title {
@@ -730,7 +872,11 @@ hr {
 @media (max-width: 991px) {
     :is(.gh-article-title, .gh-article-excerpt),
     .gh-content > .gh-article-header {
-        grid-column: 1 / span 10;
+        grid-column: 1 / span 12;
+    }
+
+    .gh-content {
+        font-size: var(--content-font-size);
     }
 
     .gh-article-meta {
@@ -744,6 +890,8 @@ hr {
     .gh-article-meta-inner {
         flex-direction: row;
         align-items: center;
+        flex-wrap: wrap;
+        row-gap: 16px;
     }
 
     .gh-article-meta .gh-author-image {
@@ -762,7 +910,7 @@ hr {
     }
 }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
     :is(.gh-article-title, .gh-article-excerpt),
     .gh-content > .gh-article-header {
         grid-column: 1 / span 12;
@@ -771,7 +919,7 @@ hr {
     .gh-content {
         font-size: var(--content-font-size);
     }
-}
+} */
 
 /* Custom CTA
 /* ---------------------------------------------------------- */
@@ -933,4 +1081,11 @@ hr {
 
 .gh-copyright {
     font-size: 1.4rem;
+    white-space: normal;
+    text-align: center;
+}
+
+.gh-copyright a {
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.32);
 }

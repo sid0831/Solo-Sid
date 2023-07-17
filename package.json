@@ -1,16 +1,16 @@
 {
-    "name": "solo",
+    "name": "solo-sid",
     "description": "A Ghost theme",
-    "version": "1.0.0",
+    "version": "1.0.5",
     "private": true,
     "engines": {
         "ghost": ">=5.0.0"
     },
     "license": "MIT",
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "Ghost Foundation & Sidney Jeong",
+        "email": "jeong.sid@sidlibrary.org",
+        "url": "https://sidlibrary.org"
     },
     "keywords": [
         "ghost",
