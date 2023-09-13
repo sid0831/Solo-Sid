@@ -1071,7 +1071,7 @@ pre {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    align-items: center;
+    align-items: right;
 }
 
 .gh-foot-menu {
@@ -1082,10 +1082,15 @@ pre {
 .gh-copyright {
     font-size: 1.4rem;
     white-space: normal;
-    text-align: center;
+    text-align: right;
 }
 
 .gh-copyright a {
     text-decoration: underline;
     text-decoration-color: rgba(255, 255, 255, 0.32);
+}
+
+.gh-copyright span {
+  font-family: "SUITE-Regular";
+  word-break: keep-all;
 }
