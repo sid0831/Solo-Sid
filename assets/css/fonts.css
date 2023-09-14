@@ -1,16 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400;1,700&family=Piazzolla:ital,opsz,wght@0,8..30,100;0,8..30,700;1,8..30,100;1,8..30,700&display=swap');
-
 @font-face {
-    font-family: Manrope;
+    font-family: 'Manrope';
     font-weight: 100 1000;
-    src: url("../fonts/Manrope[wght].woff2") format("woff2-variations");
+    font-style: normal;
+    src: url('../fonts/Manrope[wght].woff2') format('woff2-variations');
 }
 
 @font-face {
-  font-family: 'SUITE-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
+    font-family: 'Cabin';
+    font-style: italic;
+    font-weight: 400;
+    font-stretch: normal;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/cabin/v26/u-4V0qWljRw-Pd815fNqc8T_wAFcX-c37MPiNYlWniJ2hJXHx_Klwg.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Cabin';
+    font-style: italic;
+    font-weight: 700;
+    font-stretch: normal;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/cabin/v26/u-4V0qWljRw-Pd815fNqc8T_wAFcX-c37MPiNYlWniJ2hJXHIPWlwg.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Cabin';
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: normal;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/cabin/v26/u-4X0qWljRw-PfU81xCKCpdpbgZJl6XFpfEd7eA9BIxxkV2EL7E.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Cabin';
+    font-style: normal;
+    font-weight: 700;
+    font-stretch: normal;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/cabin/v26/u-4X0qWljRw-PfU81xCKCpdpbgZJl6XFpfEd7eA9BIxxkbqDL7E.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Piazzolla';
+    font-style: italic;
+    font-weight: 100;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/piazzolla/v35/N0b72SlTPu5rIkWIZjVgI-TckS03oGpPETyEJ88Rbvi0_TzOzKcQhZqw3gU.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Piazzolla';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/piazzolla/v35/N0b72SlTPu5rIkWIZjVgI-TckS03oGpPETyEJ88Rbvi0_TzOzKcQhX223gU.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Piazzolla';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/piazzolla/v35/N0b52SlTPu5rIkWIZjVKKtYtfxYqZ4RJBFzFfYUjkSDdlqZgy7LYx3Ly.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Piazzolla';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/piazzolla/v35/N0b52SlTPu5rIkWIZjVKKtYtfxYqZ4RJBFzFfYUjkSDdlqZgy7I_wXLy.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GowunBatang-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GilbeotRainbow';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/GilbeotRainbow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {

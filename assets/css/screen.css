@@ -2,8 +2,8 @@
 @import "fonts.css";
 
 :root {
-    --font-sans: Cabin, Manrope, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
-    --font-serif: Piazzolla, Libre Baskerville, Georgia, Times, serif;
+    --font-sans: Cabin, Manrope, SUITE-Regular, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+    --font-serif: Piazzolla, GowunBatang-Regular, Baskerville, Georgia, Times, serif;
     --font-mono: Hack, JetBrains Mono, Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
     --color-primary-text: var(--color-darker-gray);
     --color-secondary-text-dark: rgba(0, 0, 0, 0.4);
@@ -151,7 +151,7 @@ pre {
 }
 
 .gh-head-logo {
-    font-weight: 800;
+    font-weight: 700;
     white-space: normal;
 }
 
@@ -848,7 +848,7 @@ pre {
 }
 
 .gh-content > :is(p, ul, ol) {
-    font-weight: 480;
+    font-weight: 100;
 }
 
 .has-serif-font .gh-content > :is([id], p, ul, ol) {
@@ -1070,14 +1070,24 @@ pre {
 
 .gh-foot-inner {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 24px;
-    align-items: right;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 .gh-foot-menu {
     font-size: 1.6rem;
     font-weight: 700;
+}
+
+.gh-foot-left {
+    font-family: 'Cabin', 'GilbeotRainbow';
+    font-size: 1.4rem;
+    color: rgba(242, 199, 99, 0.64);
+    text-shadow: rgba(138, 42, 43, 0.8) 1px 1px 0;
+    white-space: normal;
+    text-align: left;
 }
 
 .gh-copyright {
@@ -1089,9 +1099,4 @@ pre {
 .gh-copyright a {
     text-decoration: underline;
     text-decoration-color: rgba(255, 255, 255, 0.32);
-}
-
-.gh-copyright span {
-  font-family: "SUITE-Regular";
-  word-break: keep-all;
 }
