@@ -1,7 +1,7 @@
 {
     "name": "solo-sid",
     "description": "A Ghost theme",
-    "version": "1.0.517a",
+    "version": "1.0.517",
     "private": true,
     "engines": {
         "ghost": ">=5.0.0"
