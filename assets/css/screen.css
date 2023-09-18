@@ -117,6 +117,10 @@ pre {
 }
 
 @media (max-width: 767px) {
+    .gh-site {
+        margin-top: 16px;
+    }
+
     .gh-canvas > * {
         grid-column: 2 / span 10;
     }
@@ -1076,6 +1080,16 @@ pre {
     align-items: flex-end;
 }
 
+.gh-foot-inner p {
+  line-height: 140%;
+  margin-bottom: 0.6rem;
+}
+
+.gh-foot-inner a {
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.32);
+}
+
 .gh-foot-menu {
     font-size: 1.6rem;
     font-weight: 700;
@@ -1096,9 +1110,21 @@ pre {
     text-align: right;
 }
 
-.gh-copyright a {
-    text-decoration: underline;
-    text-decoration-color: rgba(255, 255, 255, 0.32);
+@media (max-width: 767px) {
+    .gh-foot-inner {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .gh-foot-left {
+        text-align: center;
+        word-break: keep-all;
+    }
+
+    .gh-copyright {
+        text-align: center;
+        word-break: keep-all;
+    }
 }
 
 /* Error Pages
@@ -1153,6 +1179,7 @@ pre {
 }
 
 .gh-error-inner .gh-error-return-button {
+    display: none; /* Temporarily hidden to see if no button looks better */
     border: 2px;
     border-style: double;
     border-radius: 8px;
@@ -1167,4 +1194,14 @@ pre {
 
 .gh-error-return-button a {
     text-decoration: none;
+}
+
+@media (max-width: 767px) {
+    .gh-error-inner {
+        align-items: flex-start;
+    }
+
+    .gh-error-inner q {
+        font-size: 3rem;
+    }
 }
